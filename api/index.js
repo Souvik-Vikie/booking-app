@@ -25,7 +25,13 @@ mongoose.connection.on("disconnected", () => {
 });
 
 //middlewares
-app.use(cors())
+app.use(cors({
+  origin: [
+    'http://localhost:3000', // for local development
+    'https://your-frontend-url.onrender.com' // replace with actual frontend URL
+  ],
+  credentials: true
+}));
 app.use(cookieParser())
 app.use(express.json());
 
