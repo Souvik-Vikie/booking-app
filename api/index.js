@@ -27,7 +27,7 @@ mongoose.connection.on("disconnected", () => {
 //middlewares
 app.use(cors({
   origin: [
-    'http://localhost:3000', // for local development
+    // 'http://localhost:3000', // for local development
     'https://souvik-booking-app.onrender.com/' 
   ],
   credentials: true
