@@ -28,7 +28,7 @@ mongoose.connection.on("disconnected", () => {
 app.use(cors({
   origin: [
     'http://localhost:3000', // for local development
-    'https://your-frontend-url.onrender.com' // replace with actual frontend URL
+    'https://souvik-booking-app.onrender.com/' 
   ],
   credentials: true
 }));
