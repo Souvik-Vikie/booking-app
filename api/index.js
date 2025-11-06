@@ -27,11 +27,20 @@ mongoose.connection.on("disconnected", () => {
 
 //middlewares
 app.use(cors({
-  origin: true, 
+  origin: true,
   credentials: true
 }));
 app.use(cookieParser())
 app.use(express.json());
+
+// Health check route
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "Booking API is running successfully!",
+    timestamp: new Date().toISOString()
+  });
+});
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
