@@ -14,6 +14,9 @@
   background-color: white;
   padding: 20px;
   position: relative;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .rClose {
@@ -75,4 +78,15 @@
   border-radius: 5px;
   width: 100%;
   margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.rButton:hover {
+  background-color: #005a9c;
+}
+
+.rContainer h2 {
+  text-align: center;
+  color: #0071c2;
+  margin-bottom: 20px;
 }
