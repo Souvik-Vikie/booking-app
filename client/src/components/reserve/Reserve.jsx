@@ -87,7 +87,7 @@ const Reserve = ({ setOpen, hotelId }) => {
       // Create Stripe Checkout Session
       const response = await axios.post("/payment/create-checkout-session", {
         amount: amount,
-        currency: "usd",
+        currency: "inr",
         roomDetails: selectedRooms,
         dates: alldates,
         hotelId: hotelId,
